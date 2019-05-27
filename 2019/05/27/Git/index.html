@@ -121,7 +121,7 @@
 
 
 
-  <title>Tag: demo | Tommywhy's blog</title>
+  <title>Git | Tommywhy's blog</title>
   
 
 
@@ -140,7 +140,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -234,52 +234,153 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>demo<small>Tag</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/27/Git/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Tommy Jiang">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Tommywhy's blog">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2019/05/26/testing/" itemprop="url">
-              
-                <span itemprop="name">testing</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">Git</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-05-26T15:26:20+12:00" content="2019-05-26">
-          05-26
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-05-27T20:22:46+12:00">2019-05-27</time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-    </div>
+      
 
+      
+        <h2 id="废话"><a href="#废话" class="headerlink" title="废话"></a>废话</h2><p>标题为废话，意思是读者完全可以忽略。闲来无事可以看一下。</p>
+<p>开篇想了很久才决定要写什么，作为一名 Web 开发人员，第一必备的技能应该就是 git 了。没什么好说的，记录一些，以备查阅。</p>
+<h2 id="git"><a href="#git" class="headerlink" title="git"></a>git</h2><ol>
+<li><p>cmd<br>最常用的命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git add</span><br><span class="line">git commit</span><br><span class="line">git status</span><br><span class="line">git diff</span><br><span class="line">git push</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>git 的状态<br>git init</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ git init  //这是一个空的仓库</span><br><span class="line">Initialized empty Git repository in </span><br><span class="line">$ git status // 此时状态为 未跟踪，</span><br><span class="line">On branch master</span><br><span class="line">Initial commit</span><br><span class="line">Untracked files:xxxx</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>git add<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">修改文件后</span><br><span class="line">$ git status // 修改文件在工作区，未提交到 stage</span><br><span class="line">On branch master</span><br><span class="line">Changes not staged for commit: </span><br><span class="line"></span><br><span class="line">$ git add ./* </span><br><span class="line">$ git status // 从工作区 add 到 stage 区</span><br><span class="line">xxxx</span><br><span class="line">Changes to be committed:</span><br></pre></td></tr></table></figure></p>
+<p>git commit<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git commit -m &quot;xxx&quot;</span><br><span class="line"></span><br><span class="line">// 从 stage 提交到 master</span><br></pre></td></tr></table></figure></p>
+<ol start="3">
+<li>解决冲突</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">git diff // 查看不同</span><br><span class="line">git log  --pretty=oneline</span><br><span class="line">git reset --hard HEAD^   //退回上一个版本    </span><br><span class="line">git reset --hard 1094a //退回固定版本</span><br><span class="line"></span><br><span class="line">git reflog</span><br><span class="line">git checkout --xxx //直接丢弃工作区的修改</span><br><span class="line"></span><br><span class="line">//当你不但改乱了工作区某个文件的内容，还添加到了stage区时(add)，想丢弃修改，分两步，第一步用命令git reset HEAD &lt;file&gt;，就回到了场景1，第二步按场景1操作。</span><br><span class="line"></span><br><span class="line">git branch dev;  git checkout dev ;git checkout -b dev //创建并切换分支</span><br><span class="line">git merge dev;    git merge --no-ff -m &quot;merge with no-ff&quot; dev // 合并分支， 在master分支下，合并dev</span><br><span class="line"></span><br><span class="line">git log --graph --pretty=oneline --abbrev-commit</span><br><span class="line">git stash     git stash list     git stash apply    git stash drop     git stash pop</span><br><span class="line">git remote -v</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/05/26/post-title/" rel="next" title="post title">
+                <i class="fa fa-chevron-left"></i> post title
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -287,6 +388,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -307,8 +412,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -330,25 +444,7 @@
             
 
             
-              
-              
-              <div class="site-state-item site-state-categories">
-                <a href="/categories/index.html">
-                  <span class="site-state-item-count">1</span>
-                  <span class="site-state-item-name">categories</span>
-                </a>
-              </div>
-            
 
-            
-              
-              
-              <div class="site-state-item site-state-tags">
-                <a href="/tags/index.html">
-                  <span class="site-state-item-count">2</span>
-                  <span class="site-state-item-name">tags</span>
-                </a>
-              </div>
             
 
           </nav>
@@ -384,6 +480,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#废话"><span class="nav-number">1.</span> <span class="nav-text">废话</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git"><span class="nav-number">2.</span> <span class="nav-text">git</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -507,6 +619,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.0.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.0.0"></script>
+
+
 
   
 
