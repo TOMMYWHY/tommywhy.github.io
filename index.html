@@ -319,7 +319,7 @@
         
           
             <h2 id="废话"><a href="#废话" class="headerlink" title="废话"></a>废话</h2><p>标题为废话，意思是读者完全可以忽略。闲来无事可以看一下。</p>
-<p>开篇想了很久才决定要写什么，作为一名 Web 开发人员，第一必备的技能应该就是 git 了。没什么好说的，记录一些，以备查阅。</p>
+<p>开篇想了很久才决定要写什么，作为一名 Web 开发人员，第一必备的技能应该就是 git 了。没什么好说的，记录一些常用命令，以备查阅。</p>
 <h2 id="git"><a href="#git" class="headerlink" title="git"></a>git</h2><ol>
 <li><p>cmd<br>最常用的命令</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git add</span><br><span class="line">git commit</span><br><span class="line">git status</span><br><span class="line">git diff</span><br><span class="line">git push</span><br></pre></td></tr></table></figure>
@@ -330,6 +330,12 @@
 </ol>
 <p>git add<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">修改文件后</span><br><span class="line">$ git status // 修改文件在工作区，未提交到 stage</span><br><span class="line">On branch master</span><br><span class="line">Changes not staged for commit: </span><br><span class="line"></span><br><span class="line">$ git add ./* </span><br><span class="line">$ git status // 从工作区 add 到 stage 区</span><br><span class="line">xxxx</span><br><span class="line">Changes to be committed:</span><br></pre></td></tr></table></figure></p>
 <p>git commit<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git commit -m &quot;xxx&quot;</span><br><span class="line"></span><br><span class="line">// 从 stage 提交到 master</span><br></pre></td></tr></table></figure></p>
+<p>git checkout<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git checkout --xx //丢弃xx文件工作区修改。.让这个文件回到最近一次</span><br><span class="line"></span><br><span class="line">git checkout dev //切换分支</span><br></pre></td></tr></table></figure></p>
+<p>分支：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">git branch; // 查看当前分支</span><br><span class="line">git branch dev; 创建分支</span><br><span class="line">git checkout dev ;切换分支</span><br><span class="line">git checkout -b dev; 创建并且换</span><br><span class="line">git merge dev;   先处在master 然后合并分支dev到master</span><br><span class="line">git merge --no-ff -m &quot;merge with no-ff&quot; dev //最好使用这条,禁用Fast forward</span><br></pre></td></tr></table></figure></p>
+<p>log<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git log --graph --pretty=oneline --abbrev-commit</span><br></pre></td></tr></table></figure></p>
+<p>stash 雪藏<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">// 历史将为编辑好工作区缓存去来</span><br><span class="line">git stash     git stash list     git stash apply    git stash drop     git stash pop</span><br></pre></td></tr></table></figure></p>
+<p>git remote -v<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote -v //查看远端库</span><br></pre></td></tr></table></figure></p>
+<p>tag // 易于团队版本号查询，目前用不上</p>
 <ol start="3">
 <li>解决冲突</li>
 </ol>
