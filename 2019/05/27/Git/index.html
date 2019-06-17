@@ -75,18 +75,15 @@
 
 
 
-<meta name="description" content="Life was like a box of chocolates. You never know what you’re gonna get.  I am a wild web developer… Loving Laravel, Learning Magento2.   Admiring Java, Using PHP. Work Experience Samsung Customer Se">
 <meta name="keywords" content="front-end,js,jquery,javascript,html5,laravel，php，magento2,Developer,Programmer,Coder,Geek,html,css,css3,">
 <meta property="og:type" content="website">
-<meta property="og:title" content="about">
-<meta property="og:url" content="http://yoursite.com/about/index.html">
+<meta property="og:title" content="Categories">
+<meta property="og:url" content="http://yoursite.com/categories/index.html">
 <meta property="og:site_name" content="Tommywhy&#39;s blog">
-<meta property="og:description" content="Life was like a box of chocolates. You never know what you’re gonna get.  I am a wild web developer… Loving Laravel, Learning Magento2.   Admiring Java, Using PHP. Work Experience Samsung Customer Se">
 <meta property="og:locale" content="En,Ch">
-<meta property="og:updated_time" content="2019-06-16T11:50:16.000Z">
+<meta property="og:updated_time" content="2019-05-26T08:50:57.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="about">
-<meta name="twitter:description" content="Life was like a box of chocolates. You never know what you’re gonna get.  I am a wild web developer… Loving Laravel, Learning Magento2.   Admiring Java, Using PHP. Work Experience Samsung Customer Se">
+<meta name="twitter:title" content="Categories">
 
 
 
@@ -118,7 +115,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/about/">
+  <link rel="canonical" href="http://yoursite.com/categories/">
 
 
 
@@ -404,6 +401,19 @@
 <li>解决冲突</li>
 </ol>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">git diff // 查看不同</span><br><span class="line">git log  --pretty=oneline</span><br><span class="line">git reset --hard HEAD^   //退回上一个版本    </span><br><span class="line">git reset --hard 1094a //退回固定版本</span><br><span class="line"></span><br><span class="line">git reflog</span><br><span class="line">git checkout --xxx //直接丢弃工作区的修改</span><br><span class="line"></span><br><span class="line">//当你不但改乱了工作区某个文件的内容，还添加到了stage区时(add)，想丢弃修改，分两步，第一步用命令git reset HEAD &lt;file&gt;，就回到了场景1，第二步按场景1操作。</span><br><span class="line"></span><br><span class="line">git branch dev;  git checkout dev ;git checkout -b dev //创建并切换分支</span><br><span class="line">git merge dev;    git merge --no-ff -m &quot;merge with no-ff&quot; dev // 合并分支， 在master分支下，合并dev</span><br><span class="line"></span><br><span class="line">git log --graph --pretty=oneline --abbrev-commit</span><br><span class="line">git stash     git stash list     git stash apply    git stash drop     git stash pop</span><br><span class="line">git remote -v</span><br></pre></td></tr></table></figure>
+<ol start="4">
+<li>github</li>
+</ol>
+<p>生成本地钥匙和锁<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -b 4096 -C <span class="string">"email.address"</span></span><br></pre></td></tr></table></figure></p>
+<p>~/.ssh 中 生成 钥匙：id_rsa 与 锁 id_rsa.pub。</p>
+<p>将 锁 id_rsa.pub 上传到github。</p>
+<p>尝试连接github，用本地的 钥匙 去开 github 上的锁<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure></p>
+<p>连接成功后，会将github IP 保存到 known_hosts 中。</p>
+<p>至此， 本地与github建立连接。</p>
+<p>git 本地配置</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config XXXX  // 看文档吧。一辈子配置不了几次。</span><br></pre></td></tr></table></figure>
+<p>完。</p>
+
       
     </div>
     
