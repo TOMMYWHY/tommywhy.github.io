@@ -75,15 +75,18 @@
 
 
 
+<meta name="description" content="Life was like a box of chocolates. You never know what you’re gonna get.  I am a wild web developer… Loving Laravel, Learning Magento2.   Admiring Java, Using PHP. Work Experience Samsung Customer Se">
 <meta name="keywords" content="front-end,js,jquery,javascript,html5,laravel，php，magento2,Developer,Programmer,Coder,Geek,html,css,css3,">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Categories">
-<meta property="og:url" content="http://yoursite.com/categories/index.html">
+<meta property="og:title" content="about">
+<meta property="og:url" content="http://yoursite.com/about/index.html">
 <meta property="og:site_name" content="Tommywhy&#39;s blog">
+<meta property="og:description" content="Life was like a box of chocolates. You never know what you’re gonna get.  I am a wild web developer… Loving Laravel, Learning Magento2.   Admiring Java, Using PHP. Work Experience Samsung Customer Se">
 <meta property="og:locale" content="En,Ch">
-<meta property="og:updated_time" content="2019-05-26T08:50:57.000Z">
+<meta property="og:updated_time" content="2019-06-16T11:50:16.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Categories">
+<meta name="twitter:title" content="about">
+<meta name="twitter:description" content="Life was like a box of chocolates. You never know what you’re gonna get.  I am a wild web developer… Loving Laravel, Learning Magento2.   Admiring Java, Using PHP. Work Experience Samsung Customer Se">
 
 
 
@@ -115,7 +118,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/categories/">
+  <link rel="canonical" href="http://yoursite.com/about/">
 
 
 
@@ -383,13 +386,13 @@
         <p>开篇想了很久才决定要写什么，作为一名 Web 开发人员，第一必备的技能应该就是 git 了。没什么好说的，记录git一些常用命令，以备查阅。</p>
 <h2 id="git-命令"><a href="#git-命令" class="headerlink" title="git 命令"></a>git 命令</h2><ol>
 <li><p>cmd<br>最常用的命令</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git add</span><br><span class="line">git commit</span><br><span class="line">git status</span><br><span class="line">git diff</span><br><span class="line">git push</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git add</span><br><span class="line">git commit</span><br><span class="line">git status -sb // 参数 sb 很有用~！</span><br><span class="line">git diff</span><br><span class="line">git push</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>git 的状态<br>git init</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ git init  //这是一个空的仓库</span><br><span class="line">Initialized empty Git repository in </span><br><span class="line">$ git status // 此时状态为 未跟踪，</span><br><span class="line">On branch master</span><br><span class="line">Initial commit</span><br><span class="line">Untracked files:xxxx</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ git init  //这是一个空的仓库</span><br><span class="line">Initialized empty Git repository in </span><br><span class="line">$ git status -sb // 此时状态为 未跟踪，此时创建文件后为 红色 M </span><br><span class="line">On branch master</span><br><span class="line">Initial commit</span><br><span class="line">Untracked files:xxxx</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
-<p>git add<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">修改文件后</span><br><span class="line">$ git status // 修改文件在工作区，未提交到 stage</span><br><span class="line">On branch master</span><br><span class="line">Changes not staged for commit: </span><br><span class="line"></span><br><span class="line">$ git add ./* </span><br><span class="line">$ git status // 从工作区 add 到 stage 区</span><br><span class="line">xxxx</span><br><span class="line">Changes to be committed:</span><br></pre></td></tr></table></figure></p>
+<p>git add<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">修改文件后</span><br><span class="line">$ git status -sb // 修改文件在工作区，未提交到 stage。 此时为绿色 M </span><br><span class="line">On branch master</span><br><span class="line">Changes not staged for commit: </span><br><span class="line"></span><br><span class="line">$ git add ./* </span><br><span class="line">$ git status // 从工作区 add 到 stage 区</span><br><span class="line">xxxx</span><br><span class="line">Changes to be committed:</span><br></pre></td></tr></table></figure></p>
 <p>git commit<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git commit -m &quot;xxx&quot;</span><br><span class="line"></span><br><span class="line">// 从 stage 提交到 master</span><br></pre></td></tr></table></figure></p>
 <p>git checkout<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git checkout --xx //丢弃xx文件工作区修改。.让这个文件回到最近一次</span><br><span class="line"></span><br><span class="line">git checkout dev //切换分支</span><br></pre></td></tr></table></figure></p>
 <p>分支：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">git branch; // 查看当前分支</span><br><span class="line">git branch dev; 创建分支</span><br><span class="line">git checkout dev ;切换分支</span><br><span class="line">git checkout -b dev; 创建并且换</span><br><span class="line">git merge dev;   先处在master 然后合并分支dev到master</span><br><span class="line">git merge --no-ff -m &quot;merge with no-ff&quot; dev //最好使用这条,禁用Fast forward</span><br></pre></td></tr></table></figure></p>
