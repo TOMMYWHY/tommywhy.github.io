@@ -121,7 +121,7 @@
 
 
 
-  <title>tags | Tommywhy's blog</title>
+  <title>HTML & CSS | Tommywhy's blog</title>
   
 
 
@@ -281,40 +281,189 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/23/html/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Tommy Jiang">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Tommywhy's blog">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">tags</h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <div class="tag-cloud">
-            <div class="tag-cloud-title">
-                5 tags in total
-            </div>
-            <div class="tag-cloud-tags">
-              <a href="/tags/HTML-CSS/" style="font-size: 12px; color: #ccc">HTML&CSS</a> <a href="/tags/JS/" style="font-size: 12px; color: #ccc">JS</a> <a href="/tags/git/" style="font-size: 12px; color: #ccc">git</a> <a href="/tags/sql/" style="font-size: 12px; color: #ccc">sql</a> <a href="/tags/tools/" style="font-size: 12px; color: #ccc">tools</a>
-            </div>
-          </div>
+          <h1 class="post-title" itemprop="name headline">HTML & CSS</h1>
         
-      </div>
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-06-23T17:22:10+12:00">2019-06-23</time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/front-end/" itemprop="url" rel="index">
+                    <span itemprop="name">front end</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <p>HTML5 与 CSS3 自认为基础已经娴熟，但还是有很多 tricky 点不了解。特开贴记录。</p>
+<h2 id="HTML5"><a href="#HTML5" class="headerlink" title="HTML5"></a>HTML5</h2><h3 id="dl-标签"><a href="#dl-标签" class="headerlink" title="dl 标签"></a>dl 标签</h3><blockquote>
+<p>表格标签，从未使用过。类似于 table，但还有所不同。 仅使用 键值对 的表格。</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">dl</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dt</span>&gt;</span>Age<span class="tag">&lt;/<span class="name">dt</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dd</span>&gt;</span>29<span class="tag">&lt;/<span class="name">dd</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dt</span>&gt;</span>Location<span class="tag">&lt;/<span class="name">dt</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dd</span>&gt;</span>Auckland<span class="tag">&lt;/<span class="name">dd</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dt</span>&gt;</span>Email<span class="tag">&lt;/<span class="name">dt</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dd</span>&gt;</span>tommywhy1989@gmail.com<span class="tag">&lt;/<span class="name">dd</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dl</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="CSS3"><a href="#CSS3" class="headerlink" title="CSS3"></a>CSS3</h2><h3 id="border"><a href="#border" class="headerlink" title="border"></a>border</h3><blockquote>
+<p>浮动时可以将 border 算入百分比中。<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;<span class="attribute">box-sizing</span>: border-box; </span><br><span class="line"><span class="attribute">width</span>:<span class="number">50%</span>;</span><br><span class="line"><span class="attribute">float</span>:left;&#125;</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<h3 id="inline-block"><a href="#inline-block" class="headerlink" title="inline-block"></a>inline-block</h3><blockquote>
+<p>当使用inline-block后，会在底部多出几像素的空白。 两句配合可应付处女座级别的客户需求。<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#123;<span class="attribute">display</span>: inline-block;</span><br><span class="line"><span class="attribute">vertical-align</span>: top;&#125;</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<h3 id="css-选择器"><a href="#css-选择器" class="headerlink" title="css 选择器"></a>css 选择器</h3><blockquote>
+<p>多类选择器：无空格。 即 section 的同时是 .skills<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">section</span><span class="selector-class">.skills</span> &gt; <span class="selector-tag">h2</span>&#123;&#125;</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<blockquote>
+<p>后代选择器： 有空格。 即 userCard 下面找 text 找 summary<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.userCard</span> <span class="selector-class">.text</span> <span class="selector-class">.summary</span> <span class="selector-tag">h1</span></span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<blockquote>
+<p>子类中个别偶数选择。<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">section</span><span class="selector-class">.skills</span> &gt; <span class="selector-tag">ol</span> &gt; <span class="selector-tag">li</span><span class="selector-pseudo">:nth-child(even)</span>&#123;&#125;</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<h3 id="css-阴影"><a href="#css-阴影" class="headerlink" title="css 阴影"></a>css 阴影</h3><blockquote>
+<p>实用工具=&gt;阴影生成器<br><a href="阴影生成器">https://www.cssmatic.com/box-shadow</a></p>
+</blockquote>
+<h3 id="css-伪类"><a href="#css-伪类" class="headerlink" title="css 伪类"></a>css 伪类</h3><blockquote>
+<p>before after 用的很少。其实做很多，不过容易给他人阅读造成困扰。<br>太极图<br><a href="http://tommywhy.com/effects/yinYang.html" target="_blank" rel="noopener">http://tommywhy.com/effects/yinYang.html</a> </p>
+</blockquote>
+
       
     </div>
     
     
     
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/HTML-CSS/" rel="tag"># HTML&CSS</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/06/08/JS遗珠/" rel="next" title="JS遗珠">
+                <i class="fa fa-chevron-left"></i> JS遗珠
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
@@ -347,8 +496,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -424,6 +582,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#HTML5"><span class="nav-number">1.</span> <span class="nav-text">HTML5</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#dl-标签"><span class="nav-number">1.1.</span> <span class="nav-text">dl 标签</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CSS3"><span class="nav-number">2.</span> <span class="nav-text">CSS3</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#border"><span class="nav-number">2.1.</span> <span class="nav-text">border</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#inline-block"><span class="nav-number">2.2.</span> <span class="nav-text">inline-block</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#css-选择器"><span class="nav-number">2.3.</span> <span class="nav-text">css 选择器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#css-阴影"><span class="nav-number">2.4.</span> <span class="nav-text">css 阴影</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#css-伪类"><span class="nav-number">2.5.</span> <span class="nav-text">css 伪类</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
