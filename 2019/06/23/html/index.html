@@ -75,18 +75,15 @@
 
 
 
-<meta name="description" content="Life was like a box of chocolates. You never know what you’re gonna get.  I am a wild web developer… Loving Laravel, Learning Magento2.   Admiring Java, Using PHP. Work Experience Samsung Customer Se">
 <meta name="keywords" content="front-end,js,jquery,javascript,html5,laravel，php，magento2,Developer,Programmer,Coder,Geek,html,css,css3,">
 <meta property="og:type" content="website">
-<meta property="og:title" content="about">
-<meta property="og:url" content="http://yoursite.com/about/index.html">
+<meta property="og:title" content="Categories">
+<meta property="og:url" content="http://yoursite.com/categories/index.html">
 <meta property="og:site_name" content="Tommywhy&#39;s blog">
-<meta property="og:description" content="Life was like a box of chocolates. You never know what you’re gonna get.  I am a wild web developer… Loving Laravel, Learning Magento2.   Admiring Java, Using PHP. Work Experience Samsung Customer Se">
 <meta property="og:locale" content="En,Ch">
-<meta property="og:updated_time" content="2019-06-16T11:50:16.000Z">
+<meta property="og:updated_time" content="2019-05-26T08:50:57.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="about">
-<meta name="twitter:description" content="Life was like a box of chocolates. You never know what you’re gonna get.  I am a wild web developer… Loving Laravel, Learning Magento2.   Admiring Java, Using PHP. Work Experience Samsung Customer Se">
+<meta name="twitter:title" content="Categories">
 
 
 
@@ -118,7 +115,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/about/">
+  <link rel="canonical" href="http://yoursite.com/categories/">
 
 
 
@@ -388,6 +385,9 @@
 <p>表格标签，从未使用过。类似于 table，但还有所不同。 仅使用 键值对 的表格。</p>
 </blockquote>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">dl</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dt</span>&gt;</span>Age<span class="tag">&lt;/<span class="name">dt</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dd</span>&gt;</span>29<span class="tag">&lt;/<span class="name">dd</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dt</span>&gt;</span>Location<span class="tag">&lt;/<span class="name">dt</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dd</span>&gt;</span>Auckland<span class="tag">&lt;/<span class="name">dd</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dt</span>&gt;</span>Email<span class="tag">&lt;/<span class="name">dt</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dd</span>&gt;</span>tommywhy1989@gmail.com<span class="tag">&lt;/<span class="name">dd</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dl</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="标签高度"><a href="#标签高度" class="headerlink" title="标签高度"></a>标签高度</h3><blockquote>
+<p>尽量把确定的宽高写在标签属性上，以减少元素重排浪费内存。 小优化。</p>
+</blockquote>
 <h2 id="CSS3"><a href="#CSS3" class="headerlink" title="CSS3"></a>CSS3</h2><h3 id="border"><a href="#border" class="headerlink" title="border"></a>border</h3><blockquote>
 <p>浮动时可以将 border 算入百分比中。<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;<span class="attribute">box-sizing</span>: border-box; </span><br><span class="line"><span class="attribute">width</span>:<span class="number">50%</span>;</span><br><span class="line"><span class="attribute">float</span>:left;&#125;</span><br></pre></td></tr></table></figure></p>
 </blockquote>
@@ -402,6 +402,12 @@
 </blockquote>
 <blockquote>
 <p>子类中个别偶数选择。<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">section</span><span class="selector-class">.skills</span> &gt; <span class="selector-tag">ol</span> &gt; <span class="selector-tag">li</span><span class="selector-pseudo">:nth-child(even)</span>&#123;&#125;</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<blockquote>
+<p>属性选择器,<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-attr">[data-x]</span>&#123;<span class="attribute">transform</span>: <span class="built_in">translateY</span>(0);<span class="attribute">transition</span>: all .<span class="number">4s</span>;&#125;</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<blockquote>
+<p>ps: css只负责动画效果，js 只负责找DOM元素<br>利用 js 控制 .active 的添加与删除实现动画。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">.topNavBar nav li.active &gt; a::after ,</span><br><span class="line">.topNavBar nav li.highlight &gt; a::after&#123;&#125;</span><br></pre></td></tr></table></figure></p>
 </blockquote>
 <h3 id="css-阴影"><a href="#css-阴影" class="headerlink" title="css 阴影"></a>css 阴影</h3><blockquote>
 <p>实用工具=&gt;阴影生成器<br><a href="阴影生成器">https://www.cssmatic.com/box-shadow</a></p>
@@ -448,6 +454,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/08/05/JS中的this/" rel="prev" title="JS中的this">
+                JS中的this <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -524,7 +534,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -546,7 +556,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
@@ -595,7 +605,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#HTML5"><span class="nav-number">1.</span> <span class="nav-text">HTML5</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#dl-标签"><span class="nav-number">1.1.</span> <span class="nav-text">dl 标签</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CSS3"><span class="nav-number">2.</span> <span class="nav-text">CSS3</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#border"><span class="nav-number">2.1.</span> <span class="nav-text">border</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#inline-block"><span class="nav-number">2.2.</span> <span class="nav-text">inline-block</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#css-选择器"><span class="nav-number">2.3.</span> <span class="nav-text">css 选择器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#css-阴影"><span class="nav-number">2.4.</span> <span class="nav-text">css 阴影</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#css-伪类"><span class="nav-number">2.5.</span> <span class="nav-text">css 伪类</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#HTML5"><span class="nav-number">1.</span> <span class="nav-text">HTML5</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#dl-标签"><span class="nav-number">1.1.</span> <span class="nav-text">dl 标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#标签高度"><span class="nav-number">1.2.</span> <span class="nav-text">标签高度</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CSS3"><span class="nav-number">2.</span> <span class="nav-text">CSS3</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#border"><span class="nav-number">2.1.</span> <span class="nav-text">border</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#inline-block"><span class="nav-number">2.2.</span> <span class="nav-text">inline-block</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#css-选择器"><span class="nav-number">2.3.</span> <span class="nav-text">css 选择器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#css-阴影"><span class="nav-number">2.4.</span> <span class="nav-text">css 阴影</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#css-伪类"><span class="nav-number">2.5.</span> <span class="nav-text">css 伪类</span></a></li></ol></li></ol></div>
             
 
           </div>

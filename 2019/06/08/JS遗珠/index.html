@@ -75,18 +75,15 @@
 
 
 
-<meta name="description" content="Life was like a box of chocolates. You never know what you’re gonna get.  I am a wild web developer… Loving Laravel, Learning Magento2.   Admiring Java, Using PHP. Work Experience Samsung Customer Se">
 <meta name="keywords" content="front-end,js,jquery,javascript,html5,laravel，php，magento2,Developer,Programmer,Coder,Geek,html,css,css3,">
 <meta property="og:type" content="website">
-<meta property="og:title" content="about">
-<meta property="og:url" content="http://yoursite.com/about/index.html">
+<meta property="og:title" content="Categories">
+<meta property="og:url" content="http://yoursite.com/categories/index.html">
 <meta property="og:site_name" content="Tommywhy&#39;s blog">
-<meta property="og:description" content="Life was like a box of chocolates. You never know what you’re gonna get.  I am a wild web developer… Loving Laravel, Learning Magento2.   Admiring Java, Using PHP. Work Experience Samsung Customer Se">
 <meta property="og:locale" content="En,Ch">
-<meta property="og:updated_time" content="2019-06-16T11:50:16.000Z">
+<meta property="og:updated_time" content="2019-05-26T08:50:57.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="about">
-<meta name="twitter:description" content="Life was like a box of chocolates. You never know what you’re gonna get.  I am a wild web developer… Loving Laravel, Learning Magento2.   Admiring Java, Using PHP. Work Experience Samsung Customer Se">
+<meta name="twitter:title" content="Categories">
 
 
 
@@ -118,7 +115,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/about/">
+  <link rel="canonical" href="http://yoursite.com/categories/">
 
 
 
@@ -398,10 +395,28 @@
 <p>注： 模板字符串中回车换行也算字符长度。</p>
 </blockquote>
 <h4 id="toString-NaN"><a href="#toString-NaN" class="headerlink" title="toString"></a>toString</h4><p>三种方法 ToString， 其中 <code>null</code> 与 <code>undefined</code> 进行 ToString 汇报错。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>+<span class="string">''</span></span><br><span class="line"><span class="built_in">String</span>(<span class="number">1</span>)</span><br><span class="line">(<span class="number">1</span>).toString()</span><br><span class="line"><span class="string">"1"</span></span><br></pre></td></tr></table></figure></p>
-<h4 id="string-相关操作方法"><a href="#string-相关操作方法" class="headerlink" title="string 相关操作方法"></a>string 相关操作方法</h4><p><code>substring()</code>返回指定索引区间的子串：</p>
+<h4 id="string-相关操作方法"><a href="#string-相关操作方法" class="headerlink" title="string 相关操作方法"></a>string 相关操作方法</h4><ol>
+<li><p><code>trim()</code> 去掉调用字符串的前后空格。</p>
+</li>
+<li><p><code>substring()</code>返回指定索引区间的子串：</p>
+</li>
+</ol>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var s = &apos;hello, world&apos;</span><br><span class="line">s.substring(0, 5); // 从索引0开始到5（不包括5），返回&apos;hello&apos;</span><br><span class="line">s.substring(7); // 从索引7开始到结束，返回&apos;world&apos;</span><br></pre></td></tr></table></figure>
-<p>Array如果通过索引赋值时，索引超过了范围，同样会引起<code>ƒ</code>大小的变化。<br>大多数其他编程语言不允许直接改变数组的大小，越界访问索引会报错。然而，JavaScript的<code>Array</code>却不会有任何错误。在编写代码时，不建议直接修改<code>Array</code>的大小，访问索引时要确保索引不会越界。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var arr = [1, 2, 3];</span><br><span class="line">arr[5] = &apos;x&apos;;</span><br><span class="line">arr; // arr变为[1, 2, 3, undefined, undefined, &apos;x&apos;]</span><br></pre></td></tr></table></figure></p>
-<p><code>slice()</code>就是对应String的<code>substring()</code>版本，它截取<code>Array</code>的部分元素，然后返回一个新的<code>Array</code>：<br>前开后闭<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var arr = [&apos;A&apos;, &apos;B&apos;, &apos;C&apos;, &apos;D&apos;, &apos;E&apos;, &apos;F&apos;, &apos;G&apos;];</span><br><span class="line">arr.slice(0, 3); // 从索引0开始，到索引3结束，但不包括索引3: [&apos;A&apos;, &apos;B&apos;, &apos;C&apos;]</span><br><span class="line">arr.slice(3); // 从索引3开始到结束: [&apos;D&apos;, &apos;E&apos;, &apos;F&apos;, &apos;G&apos;]</span><br></pre></td></tr></table></figure></p>
+<ol start="3">
+<li><code>concat()</code> 拼接两个字符串并返回新的字符串。同 Array。</li>
+</ol>
+<p>4.<code>slice()</code>  裁切，同 Array 。</p>
+<ol start="5">
+<li><code>repalce()</code> 替换字符串中一个字符。</li>
+</ol>
+<h3 id="Array"><a href="#Array" class="headerlink" title="Array"></a>Array</h3><h4 id="array-相关操作方法"><a href="#array-相关操作方法" class="headerlink" title="array 相关操作方法"></a>array 相关操作方法</h4><ol>
+<li><p>Array如果通过索引赋值时，索引超过了范围，同样会引起<code>ƒ</code>大小的变化。<br>大多数其他编程语言不允许直接改变数组的大小，越界访问索引会报错。然而，JavaScript的<code>Array</code>却不会有任何错误。在编写代码时，不建议直接修改<code>Array</code>的大小，访问索引时要确保索引不会越界。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var arr = [1, 2, 3];</span><br><span class="line">arr[5] = &apos;x&apos;;</span><br><span class="line">arr; // arr变为[1, 2, 3, undefined, undefined, &apos;x&apos;]</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>slice()</code>就是对应String的<code>substring()</code>版本，它截取<code>Array</code>的部分元素，然后返回一个新的<code>Array</code>：<br>前开后闭</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var arr = [&apos;A&apos;, &apos;B&apos;, &apos;C&apos;, &apos;D&apos;, &apos;E&apos;, &apos;F&apos;, &apos;G&apos;];</span><br><span class="line">arr.slice(0, 3); // 从索引0开始，到索引3结束，但不包括索引3: [&apos;A&apos;, &apos;B&apos;, &apos;C&apos;]</span><br><span class="line">arr.slice(3); // 从索引3开始到结束: [&apos;D&apos;, &apos;E&apos;, &apos;F&apos;, &apos;G&apos;]</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
 <p>如果不给<code>slice()</code>传递任何参数，它就会从头到尾截取所有元素。利用这一点，我们可以很容易地复制一个<code>Array</code>：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var arr = [&apos;A&apos;, &apos;B&apos;, &apos;C&apos;, &apos;D&apos;, &apos;E&apos;, &apos;F&apos;, &apos;G&apos;];</span><br><span class="line">var aCopy = arr.slice();</span><br><span class="line">aCopy; // [&apos;A&apos;, &apos;B&apos;, &apos;C&apos;, &apos;D&apos;, &apos;E&apos;, &apos;F&apos;, &apos;G&apos;]</span><br><span class="line">aCopy === arr; // false</span><br></pre></td></tr></table></figure>
 <p> unshift和shift<br>如果要往<code>Array</code>的头部添加若干元素，使用<code>unshift()</code>方法，<code>shift()</code>方法则把<code>Array</code>的第一个元素删掉：</p>
@@ -513,6 +528,9 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">JSON.parse(&apos;[1,2,3,true]&apos;); // [1, 2, 3, true]</span><br><span class="line">JSON.parse(&apos;&#123;&quot;name&quot;:&quot;小明&quot;,&quot;age&quot;:14&#125;&apos;); // Object &#123;name: &apos;小明&apos;, age: 14&#125;</span><br><span class="line">JSON.parse(&apos;true&apos;); // true</span><br><span class="line">JSON.parse(&apos;123.45&apos;); // 123.45</span><br></pre></td></tr></table></figure>
 <p><code>JSON.parse()</code>还可以接收一个函数，用来转换解析出的属性：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&apos;use strict&apos;;</span><br><span class="line">var obj = JSON.parse(&apos;&#123;&quot;name&quot;:&quot;小明&quot;,&quot;age&quot;:14&#125;&apos;, function (key, value) &#123;</span><br><span class="line">    if (key === &apos;name&apos;) &#123;</span><br><span class="line">        return value + &apos;同学&apos;;</span><br><span class="line">    &#125;</span><br><span class="line">    return value;</span><br><span class="line">&#125;);</span><br><span class="line">console.log(JSON.stringify(obj)); // &#123;name: &apos;小明同学&apos;, age: 14&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="DOM"><a href="#DOM" class="headerlink" title="DOM"></a>DOM</h3><p>js 最重要的任务是找到 DOM 上的 element，然后负责添加 css效果类。</p>
+<h3 id="选择器"><a href="#选择器" class="headerlink" title="选择器"></a>选择器</h3><p>集合选择器<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.querySelectorAll(<span class="string">'\[data-x\]'</span>)</span><br></pre></td></tr></table></figure></p>
+<p>元素选择器<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.querySelector(<span class="string">'a\[href="#'</span>+ id +<span class="string">'"\]'</span>).parentNode</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -632,7 +650,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -654,7 +672,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
@@ -703,7 +721,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#basic"><span class="nav-number">1.</span> <span class="nav-text">basic</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#String-字符串"><span class="nav-number">2.</span> <span class="nav-text">String 字符串</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#toString-NaN"><span class="nav-number">2.1.</span> <span class="nav-text">toString</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#string-相关操作方法"><span class="nav-number">2.2.</span> <span class="nav-text">string 相关操作方法</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Boolean-布尔"><span class="nav-number">3.</span> <span class="nav-text">Boolean 布尔</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#ToBoolean"><span class="nav-number">3.1.</span> <span class="nav-text">ToBoolean</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Number-数字"><span class="nav-number">4.</span> <span class="nav-text">Number 数字</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#ToNumber"><span class="nav-number">4.1.</span> <span class="nav-text">ToNumber</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Object-对象"><span class="nav-number">5.</span> <span class="nav-text">Object 对象</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#ToObject"><span class="nav-number">5.1.</span> <span class="nav-text">ToObject</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#set-map……"><span class="nav-number">6.</span> <span class="nav-text">set map……..</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#function"><span class="nav-number">7.</span> <span class="nav-text">function</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#作用域"><span class="nav-number">7.1.</span> <span class="nav-text">作用域</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#let"><span class="nav-number">7.2.</span> <span class="nav-text">let</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#this"><span class="nav-number">7.3.</span> <span class="nav-text">this</span></a></li></ol></li></ol><li class="nav-item nav-level-1"><a class="nav-link" href="#arr-map-arr-reduce"><span class="nav-number"></span> <span class="nav-text">arr.map() arr.reduce()</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#closure"><span class="nav-number"></span> <span class="nav-text">closure</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#obj"><span class="nav-number"></span> <span class="nav-text">obj</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#regExp"><span class="nav-number"></span> <span class="nav-text">regExp</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#jason"><span class="nav-number">0.1.</span> <span class="nav-text">jason</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#反序列化"><span class="nav-number">0.2.</span> <span class="nav-text">反序列化</span></a></li></ol></li></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#basic"><span class="nav-number">1.</span> <span class="nav-text">basic</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#String-字符串"><span class="nav-number">2.</span> <span class="nav-text">String 字符串</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#toString-NaN"><span class="nav-number">2.1.</span> <span class="nav-text">toString</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#string-相关操作方法"><span class="nav-number">2.2.</span> <span class="nav-text">string 相关操作方法</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Array"><span class="nav-number">3.</span> <span class="nav-text">Array</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#array-相关操作方法"><span class="nav-number">3.1.</span> <span class="nav-text">array 相关操作方法</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Boolean-布尔"><span class="nav-number">4.</span> <span class="nav-text">Boolean 布尔</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#ToBoolean"><span class="nav-number">4.1.</span> <span class="nav-text">ToBoolean</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Number-数字"><span class="nav-number">5.</span> <span class="nav-text">Number 数字</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#ToNumber"><span class="nav-number">5.1.</span> <span class="nav-text">ToNumber</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Object-对象"><span class="nav-number">6.</span> <span class="nav-text">Object 对象</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#ToObject"><span class="nav-number">6.1.</span> <span class="nav-text">ToObject</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#set-map……"><span class="nav-number">7.</span> <span class="nav-text">set map……..</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#function"><span class="nav-number">8.</span> <span class="nav-text">function</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#作用域"><span class="nav-number">8.1.</span> <span class="nav-text">作用域</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#let"><span class="nav-number">8.2.</span> <span class="nav-text">let</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#this"><span class="nav-number">8.3.</span> <span class="nav-text">this</span></a></li></ol></li></ol><li class="nav-item nav-level-1"><a class="nav-link" href="#arr-map-arr-reduce"><span class="nav-number"></span> <span class="nav-text">arr.map() arr.reduce()</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#closure"><span class="nav-number"></span> <span class="nav-text">closure</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#obj"><span class="nav-number"></span> <span class="nav-text">obj</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#regExp"><span class="nav-number"></span> <span class="nav-text">regExp</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#jason"><span class="nav-number">0.1.</span> <span class="nav-text">jason</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#反序列化"><span class="nav-number">0.2.</span> <span class="nav-text">反序列化</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DOM"><span class="nav-number">1.</span> <span class="nav-text">DOM</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#选择器"><span class="nav-number">2.</span> <span class="nav-text">选择器</span></a></li></div>
             
 
           </div>
