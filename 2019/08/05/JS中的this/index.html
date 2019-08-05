@@ -390,18 +390,7 @@
 <h3 id="特例"><a href="#特例" class="headerlink" title="特例"></a>特例</h3><p>绑定点击时间中的 this，指的是被出发的元素本身。</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.addEventListener(<span class="string">'scroll'</span>,  <span class="function"><span class="keyword">function</span>(<span class="params">e</span>) </span>&#123;</span><br><span class="line">                <span class="keyword">if</span> (<span class="built_in">window</span>.scrollY &gt; <span class="number">0</span>) &#123;</span><br><span class="line">                    <span class="keyword">this</span>.active() <span class="comment">// this 是被监听 元素</span></span><br><span class="line">                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                    <span class="keyword">this</span>.deactive()</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;)</span><br></pre></td></tr></table></figure>
 <h3 id="箭头函数"><a href="#箭头函数" class="headerlink" title="箭头函数"></a>箭头函数</h3><p>()=&gt;{} 中不绑定 this 的， 换言之，箭头函数中没有 this，如果出现 this， 向上查找。</p>
-<pre><code class="javascript">
-bindEvents: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>{
-            <span class="keyword">let</span> view = <span class="keyword">this</span>.view 
-            <span class="built_in">window</span>.addEventListener(<span class="string">'scroll'</span>, (e)=&gt; {
-                <span class="keyword">if</span> (<span class="built_in">window</span>.scrollY &gt; <span class="number">0</span>) {
-                    <span class="keyword">this</span>.active()<span class="comment">// 上面 view 的 this 是同一个</span>
-                } <span class="keyword">else</span> {
-                    <span class="keyword">this</span>.deactive()
-                }
-            })
-        },
-</code></pre>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">bindEvents: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> view = <span class="keyword">this</span>.view </span><br><span class="line">    <span class="built_in">window</span>.addEventListener(<span class="string">'scroll'</span>, (e)=&gt; &#123;</span><br><span class="line">        <span class="keyword">if</span> (<span class="built_in">window</span>.scrollY &gt; <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">this</span>.active()<span class="comment">// 上面 view 的 this 是同一个</span></span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">this</span>.deactive()</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
 <h3 id="Tip"><a href="#Tip" class="headerlink" title="Tip"></a>Tip</h3><p>使用 VS code 可以轻松搞定 this。 但是有的时候不是很准确，但是大致可以确定 this 的指向。</p>
 
       
