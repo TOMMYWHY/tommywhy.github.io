@@ -75,15 +75,18 @@
 
 
 
+<meta name="description" content="Life was like a box of chocolates. You never know what you’re gonna get.  I am a wild web developer… Loving Laravel, Learning Magento2.   Admiring Java, Using PHP. Work Experience Samsung Customer Se">
 <meta name="keywords" content="front-end,js,jquery,javascript,html5,laravel，php，magento2,Developer,Programmer,Coder,Geek,html,css,css3,">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Categories">
-<meta property="og:url" content="http://yoursite.com/categories/index.html">
+<meta property="og:title" content="about">
+<meta property="og:url" content="http://yoursite.com/about/index.html">
 <meta property="og:site_name" content="Tommywhy&#39;s blog">
+<meta property="og:description" content="Life was like a box of chocolates. You never know what you’re gonna get.  I am a wild web developer… Loving Laravel, Learning Magento2.   Admiring Java, Using PHP. Work Experience Samsung Customer Se">
 <meta property="og:locale" content="En,Ch">
-<meta property="og:updated_time" content="2019-05-26T08:50:57.000Z">
+<meta property="og:updated_time" content="2019-06-16T11:50:16.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Categories">
+<meta name="twitter:title" content="about">
+<meta name="twitter:description" content="Life was like a box of chocolates. You never know what you’re gonna get.  I am a wild web developer… Loving Laravel, Learning Magento2.   Admiring Java, Using PHP. Work Experience Samsung Customer Se">
 
 
 
@@ -115,7 +118,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/categories/">
+  <link rel="canonical" href="http://yoursite.com/about/">
 
 
 
@@ -386,7 +389,7 @@
 <p>如果 this 是 undefined， 在 DOM 中非严格模式下，this 就指向了 window</p>
 <h3 id="特例"><a href="#特例" class="headerlink" title="特例"></a>特例</h3><p>绑定点击时间中的 this，指的是被出发的元素本身。</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.addEventListener(<span class="string">'scroll'</span>,  <span class="function"><span class="keyword">function</span>(<span class="params">e</span>) </span>&#123;</span><br><span class="line">                <span class="keyword">if</span> (<span class="built_in">window</span>.scrollY &gt; <span class="number">0</span>) &#123;</span><br><span class="line">                    <span class="keyword">this</span>.active() <span class="comment">// this 是被监听 元素</span></span><br><span class="line">                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                    <span class="keyword">this</span>.deactive()</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;)</span><br></pre></td></tr></table></figure>
-<h3 id="箭头函数"><a href="#箭头函数" class="headerlink" title="箭头函数"></a>箭头函数</h3><p>()=&gt;{} 中不绑定 this 的， 换言之，箭头函数中没有 this，如果出现 this， 向上查找。</p>
+<h3 id="箭头函数"><a href="#箭头函数" class="headerlink" title="箭头函数"></a>箭头函数</h3><p>()=&gt;{} 中不绑定 this 的， 换言之，箭头函数中没有 this，如果出现 this， 向上查找。内外 this 不变。</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">bindEvents: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> view = <span class="keyword">this</span>.view </span><br><span class="line">    <span class="built_in">window</span>.addEventListener(<span class="string">'scroll'</span>, (e)=&gt; &#123;</span><br><span class="line">        <span class="keyword">if</span> (<span class="built_in">window</span>.scrollY &gt; <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">this</span>.active()<span class="comment">// 上面 view 的 this 是同一个</span></span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">this</span>.deactive()</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
 <h3 id="Tip"><a href="#Tip" class="headerlink" title="Tip"></a>Tip</h3><p>使用 VS code 可以轻松搞定 this。 但是有的时候不是很准确，但是大致可以确定 this 的指向。</p>
 
