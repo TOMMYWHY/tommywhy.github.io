@@ -387,7 +387,8 @@
 <p>于是决心记录一下 <font color="#dd0000">this</font></p>
 <h3 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h3><p>正规调用函数方法是用 call(), 其中第一个参数就是 this， 即调用函数的对象。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fn().call(<span class="literal">undefined</span>,args[,,,])</span><br></pre></td></tr></table></figure></p>
 <p>如果 this 是 undefined， 在 DOM 中非严格模式下，this 就指向了 window</p>
-<h3 id="特例"><a href="#特例" class="headerlink" title="特例"></a>特例</h3><p>绑定点击时间中的 this，指的是被出发的元素本身。</p>
+<h3 id="call-，-apply-，-bind"><a href="#call-，-apply-，-bind" class="headerlink" title="call ， apply ， bind"></a>call ， apply ， bind</h3><p>call() 执行的时候将剩余参数一次传入；<br>apply() 则将剩余参数作为数组传入。<br>bind() 只有一个参数， 那就是 this。 除了绑定 this 别无他用。</p>
+<h3 id="特例"><a href="#特例" class="headerlink" title="特例"></a>特例</h3><p>绑定点击时间中的 this，指的是被触发的元素本身。</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.addEventListener(<span class="string">'scroll'</span>,  <span class="function"><span class="keyword">function</span>(<span class="params">e</span>) </span>&#123;</span><br><span class="line">                <span class="keyword">if</span> (<span class="built_in">window</span>.scrollY &gt; <span class="number">0</span>) &#123;</span><br><span class="line">                    <span class="keyword">this</span>.active() <span class="comment">// this 是被监听 元素</span></span><br><span class="line">                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                    <span class="keyword">this</span>.deactive()</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;)</span><br></pre></td></tr></table></figure>
 <h3 id="箭头函数"><a href="#箭头函数" class="headerlink" title="箭头函数"></a>箭头函数</h3><p>()=&gt;{} 中不绑定 this 的， 换言之，箭头函数中没有 this，如果出现 this， 向上查找。内外 this 不变。</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">bindEvents: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> view = <span class="keyword">this</span>.view </span><br><span class="line">    <span class="built_in">window</span>.addEventListener(<span class="string">'scroll'</span>, (e)=&gt; &#123;</span><br><span class="line">        <span class="keyword">if</span> (<span class="built_in">window</span>.scrollY &gt; <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">this</span>.active()<span class="comment">// 上面 view 的 this 是同一个</span></span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">this</span>.deactive()</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
@@ -431,6 +432,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/08/23/JS数组/" rel="prev" title="JS数组">
+                JS数组 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -507,7 +512,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -578,7 +583,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#原理"><span class="nav-number">1.</span> <span class="nav-text">原理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#特例"><span class="nav-number">2.</span> <span class="nav-text">特例</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#箭头函数"><span class="nav-number">3.</span> <span class="nav-text">箭头函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tip"><span class="nav-number">4.</span> <span class="nav-text">Tip</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#原理"><span class="nav-number">1.</span> <span class="nav-text">原理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#call-，-apply-，-bind"><span class="nav-number">2.</span> <span class="nav-text">call ， apply ， bind</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#特例"><span class="nav-number">3.</span> <span class="nav-text">特例</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#箭头函数"><span class="nav-number">4.</span> <span class="nav-text">箭头函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tip"><span class="nav-number">5.</span> <span class="nav-text">Tip</span></a></li></ol></div>
             
 
           </div>
