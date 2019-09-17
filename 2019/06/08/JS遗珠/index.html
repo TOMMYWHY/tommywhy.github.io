@@ -390,7 +390,8 @@
 <p>手机端：js内部文件可以起到性能优化。</p>
 <p>唯一能判断<code>NaN</code>的方法是通过<code>isNaN()</code>函数：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">isNaN</span>(<span class="literal">NaN</span>); <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
-<h3 id="String-字符串"><a href="#String-字符串" class="headerlink" title="String 字符串"></a>String 字符串</h3><p>ES6新增了一种模板字符串，表示方法和上面的多行字符串一样，但是它会自动替换字符串中的变量：</p>
+<h3 id="String-字符串"><a href="#String-字符串" class="headerlink" title="String 字符串"></a>String 字符串</h3><p>js 中 string 属于基本数据类型 (不同于 java 中的 String)</p>
+<p>ES6新增了一种模板字符串，表示方法和上面的多行字符串一样，但是它会自动替换字符串中的变量：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> name = <span class="string">'小明'</span>;</span><br><span class="line"><span class="keyword">var</span> age = <span class="number">20</span>;</span><br><span class="line"><span class="keyword">var</span> message = <span class="string">`你好, <span class="subst">$&#123;name&#125;</span>, 你今年<span class="subst">$&#123;age&#125;</span>岁了!`</span>;</span><br><span class="line">alert(message);</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>注： 模板字符串中回车换行也算字符长度。</p>
