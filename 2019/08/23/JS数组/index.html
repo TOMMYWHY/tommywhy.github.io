@@ -83,7 +83,7 @@
 <meta property="og:site_name" content="Tommywhy&#39;s blog">
 <meta property="og:description" content="Life was like a box of chocolates. You never know what you’re gonna get.  I am a wild web developer… Loving Laravel, Learning Magento2.   Admiring Java, Using PHP. Work Experience Samsung Customer Se">
 <meta property="og:locale" content="En,Ch">
-<meta property="og:updated_time" content="2019-06-16T11:50:16.000Z">
+<meta property="og:updated_time" content="2021-04-11T23:28:11.883Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="about">
 <meta name="twitter:description" content="Life was like a box of chocolates. You never know what you’re gonna get.  I am a wild web developer… Loving Laravel, Learning Magento2.   Admiring Java, Using PHP. Work Experience Samsung Customer Se">
@@ -412,7 +412,12 @@
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="string">'A'</span>, <span class="string">'B'</span>, <span class="string">'C'</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</span><br><span class="line">arr.join(<span class="string">'-'</span>); <span class="comment">// 'A-B-C-1-2-3'</span></span><br></pre></td></tr></table></figure>
 <p>如果<code>Array</code>的元素不是字符串，将自动转换为字符串后再连接。<br>不传参数将自动以 ‘,’ 分隔。</p>
 <p><strong>注意</strong>  字符串中 split() 与 join 是可逆操作。</p>
-<h4 id="every-与-forEach"><a href="#every-与-forEach" class="headerlink" title="every 与 forEach"></a>every 与 forEach</h4>
+<h4 id="遍历方法"><a href="#遍历方法" class="headerlink" title="遍历方法"></a>遍历方法</h4><p>[].every（fun）<br>:返回一个boolean，判断<strong>每个元素</strong>是否符合func条件（所有都判断）（并没有改变原数组）</p>
+<p>[].some()<br>:返回一个boolean，判断<strong>是否有元素</strong>是否符合func条件(有一个就行)（并没有改变原数组）</p>
+<p>[].filter()<br>:返回一个符合func条件的元素数组（并没有改变原数组）</p>
+<p> [].forEach(fun)    不生成新数组的迭代器方法,没有返回值, 改变原数组操作</p>
+<p>[].map(fun)<br>有返回值，可以return出来，返回一个新的Array.<br>[].reduce(function(prev,cur,index,arr),init)</p>
+
       
     </div>
     
@@ -602,7 +607,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Array"><span class="nav-number">1.</span> <span class="nav-text">Array</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#array-定义"><span class="nav-number">1.1.</span> <span class="nav-text">array 定义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#改变原数组的方法-push-pop-shift-unshift-sort-reverse-splice"><span class="nav-number">1.2.</span> <span class="nav-text">改变原数组的方法 [push, pop, shift, unshift, sort, reverse, splice]</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#不改变原数组的方法-concat-join-split-toString-slice"><span class="nav-number">1.3.</span> <span class="nav-text">不改变原数组的方法 [ concat, join, split, toString, slice]</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#every-与-forEach"><span class="nav-number">1.4.</span> <span class="nav-text">every 与 forEach</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Array"><span class="nav-number">1.</span> <span class="nav-text">Array</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#array-定义"><span class="nav-number">1.1.</span> <span class="nav-text">array 定义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#改变原数组的方法-push-pop-shift-unshift-sort-reverse-splice"><span class="nav-number">1.2.</span> <span class="nav-text">改变原数组的方法 [push, pop, shift, unshift, sort, reverse, splice]</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#不改变原数组的方法-concat-join-split-toString-slice"><span class="nav-number">1.3.</span> <span class="nav-text">不改变原数组的方法 [ concat, join, split, toString, slice]</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#遍历方法"><span class="nav-number">1.4.</span> <span class="nav-text">遍历方法</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -622,7 +627,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; 2019 &mdash; <span itemprop="copyrightYear">2021</span>
   <span class="with-love">
     <i class="fa fa-snowflake-o"></i>
   </span>
